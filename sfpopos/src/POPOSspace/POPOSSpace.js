@@ -1,6 +1,7 @@
 import React from 'react'
 // import logo from './logo.svg'
 import './POPOSSpace.css';
+import { Link } from 'react-router-dom'
 
 function POPOSSpace(props) {
     const { name, image, address } = props
@@ -12,7 +13,11 @@ function POPOSSpace(props) {
                 height="300"
                 alt="50 Califonia St."
             />
-            <h1>{name}</h1>
+            <h1>
+                <Link to={`/details/${id}`}>
+                    {name}
+                </Link>
+            </h1>
             <div>{address}</div>
         </div>
     )

@@ -4,18 +4,23 @@ import './App.css';
 import Title from './Title';
 import POPOSList from './POPOSList';
 import Footer from './Footer';
+import { HashRouter as Router, Route } from 'react-router-dom'
+import About from './About'
 
 
 
 
 function App() {
   return (
-    <div className="App">
-      <Title />
-      <POPOSList />
-      {/* <Footer /> */}
+    <Router>
+      <div className="App">
+        <Title />
+        <Route path="/" component={POPOSList} />
+        <Route path="/about" component={About} />
+        {/* <Footer /> */}
 
-    </div>
+      </div>
+    </Router>
   );
 }
 
