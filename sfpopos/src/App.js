@@ -5,7 +5,8 @@ import Title from './Title';
 import POPOSList from './POPOSList';
 import Footer from './Footer';
 import { HashRouter as Router, Route } from 'react-router-dom'
-import About from './About'
+import About from './About/About'
+import POPOSDetails from './POPOSDetails'
 
 
 
@@ -17,6 +18,8 @@ function App() {
         <Title />
         <Route path="/" component={POPOSList} />
         <Route path="/about" component={About} />
+        <Route path="/details/:id" component={POPOSDetails} />
+
         {/* <Footer /> */}
 
       </div>
